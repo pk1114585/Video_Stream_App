@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/dark_blue">
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:id="@+id/idLLHeading"
+       android:layout_marginStart="10dp"
+       android:layout_marginEnd="10dp"
+       android:orientation="horizontal"
+       android:background="@color/dark_blue">
+       <ImageView
+           android:layout_width="25dp"
+           android:layout_height="25dp"
+           android:layout_marginTop="10dp"
+           android:layout_marginBottom="10dp"
+           android:src="@drawable/ic_playicon"
+           app:tint="@android:color/holo_red_light"/>
+
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:fontFamily="@font/roboto"
+           android:padding="8dp"
+           android:text="@string/app_name"
+           android:textColor="@color/white"
+           android:textSize="20sp"
+           android:textStyle="bold"
+           />
+   </LinearLayout>
+    <ProgressBar
+        android:id="@+id/idPBLoading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_centerInParent="true"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/idRVCategories"
+        android:layout_below="@+id/idLLHeading"
+        tools:listitem="@layout/categories_rv_item"/>
+
+
+</RelativeLayout>
